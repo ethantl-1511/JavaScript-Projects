@@ -52,6 +52,9 @@ document.write(g === h);    // Checks if g is the same as h. False.
 document.write(1 < 2 && 3 < 4); // Is 1<2 AND 3<4? True.
 document.write(1 > 2 && 3 < 4); // Is 1>2 AND 3<4? False.
 
+document.write(1 > 2 || 3 < 4); // Is 1>2 OR 3<4? True.
+document.write(1 > 2 || 3 > 4); // Is 1<2 OR 3<4? False.
+
 function notFunction1(){
 	document.getElementById("not1").innerHTML = !(20 > 10); // Not operator to display true or false. False.
 }
