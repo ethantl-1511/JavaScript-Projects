@@ -27,21 +27,21 @@ function placeXorO(squareNumber){ //Function for placing an X or O in a square.
             else if (arrayIncludes('0X', '4X', '8X')) { drawWinLine(100,100,520,520) } // Top-left-buttom-right diagonal win
             else if (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100,508,510,90) } // Bottom-left-top-right diagonal win, END OF X WINS
             // Start of O win conditions
-            else if (arrayIncludes('0O', '1O', '20')) { drawWinLine(50,100,558,100) } // If O is on 0, 1, 2 - win condition.
-            else if (arrayIncludes('3O', '4O', '50')) { drawWinLine(50,304,558,304) } 
-            else if (arrayIncludes('6O', '70', '80')) { drawWinLine(50,508,558,508) } // End of horizontal O win conditions
-            else if (arrayIncludes('0O', '30', '60')) { drawWinLine(100,50,100,558) }
-            else if (arrayIncludes('1O', '40', '70')) { drawWinLine(304,50,304,558) }
-            else if (arrayIncludes('2O', '50', '80')) { drawWinLine(508,50,508,558) } // End of vertical O win conditions
-            else if (arrayIncludes('0O', '40', '80')) { drawWinLine(100,100,520,520) } // Top-left-buttom-right diagonal win
-            else if (arrayIncludes('6O', '40', '20')) { drawWinLine(100,508,510,90) } // Bottom-left-top-right diagonal win, END OF O WINS
+            else if (arrayIncludes('0O', '1O', '2O')) { drawWinLine(50,100,558,100) } // If O is on 0, 1, 2 - win condition.
+            else if (arrayIncludes('3O', '4O', '5O')) { drawWinLine(50,304,558,304) } 
+            else if (arrayIncludes('6O', '7O', '8O')) { drawWinLine(50,508,558,508) } // End of horizontal O win conditions
+            else if (arrayIncludes('0O', '3O', '6O')) { drawWinLine(100,50,100,558) }
+            else if (arrayIncludes('1O', '4O', '7O')) { drawWinLine(304,50,304,558) }
+            else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508,50,508,558) } // End of vertical O win conditions
+            else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100,100,520,520) } // Top-left-buttom-right diagonal win
+            else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100,508,510,90) } // Bottom-left-top-right diagonal win, END OF O WINS
             // Condition for tie. If none of the above are met, and 9 squares are selected the code executes.
             else if (selectedSquares.length >= 9) {
                 audio('./media/tie.mp3'); // Plays tie sound
                 setTimeout(function() { resetGame(); }, 1500); // After 1.3s, resetGame function is called.
             }
 
-            function arrayIncludes(squareA, squareB, squareC){ // Function checks if an array includes 3 strings. Used to check for win condition.
+            function arrayIncludes(squareA, squareB, squareC){ // Function checks if an array includes 3 strings. Used to check for win conditions.
                 // Variables to be used to check for 3 in a row:
                 const a = selectedSquares.includes(squareA);
                 const b = selectedSquares.includes(squareB);
