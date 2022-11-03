@@ -81,11 +81,11 @@ keys.addEventListener('click', (event) => {
         updateDisplay();
         return;
     }
-//    if (target.classList.contains('decimal')) {
-//        handleOperator(target.value);
-//        updateDisplay();
-//        return;
-//    }
+    if (target.classList.contains('decimal')) {
+        inputDecimal(target.value);
+        updateDisplay();
+        return;
+    }
     if (target.classList.contains('all-clear')) { // Ensures AC clears all inputs from the Calculator screen.
         CalculatorReset();
         updateDisplay();
