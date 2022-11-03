@@ -38,7 +38,7 @@ function placeXorO(squareNumber){ //Function for placing an X or O in a square.
             // Condition for tie. If none of the above are met, and 9 squares are selected the code executes.
             else if (selectedSquares.length >= 9) {
                 audio('./media/tie.mp3'); // Plays tie sound
-                setTimeout(function() { resetGame(); }, 1500); // After 1.3s, resetGame function is called.
+                setTimeout(function() { resetGame(); }, 1000); // After 1s, resetGame function is called.
             }
 
             function arrayIncludes(squareA, squareB, squareC){ // Function checks if an array includes 3 strings. Used to check for win conditions.
